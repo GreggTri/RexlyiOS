@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5CB8308D29A4AFC000BE10EC /* RexlyiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8308C29A4AFC000BE10EC /* RexlyiOSApp.swift */; };
-		5CB8308F29A4AFC000BE10EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8308E29A4AFC000BE10EC /* ContentView.swift */; };
+		5CB8308F29A4AFC000BE10EC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8308E29A4AFC000BE10EC /* ChatView.swift */; };
 		5CB8309129A4AFC100BE10EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB8309029A4AFC100BE10EC /* Assets.xcassets */; };
 		5CB8309529A4AFC100BE10EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB8309429A4AFC100BE10EC /* Preview Assets.xcassets */; };
+		5CB8309D29A89C1D00BE10EC /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5CB8308929A4AFC000BE10EC /* RexlyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RexlyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB8308C29A4AFC000BE10EC /* RexlyiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RexlyiOSApp.swift; sourceTree = "<group>"; };
-		5CB8308E29A4AFC000BE10EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5CB8308E29A4AFC000BE10EC /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		5CB8309029A4AFC100BE10EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CB8309229A4AFC100BE10EC /* RexlyiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RexlyiOS.entitlements; sourceTree = "<group>"; };
 		5CB8309429A4AFC100BE10EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 		5CB8308B29A4AFC000BE10EC /* RexlyiOS */ = {
 			isa = PBXGroup;
 			children = (
+				5CB8309B29A89C0700BE10EC /* Model */,
 				5CB8308C29A4AFC000BE10EC /* RexlyiOSApp.swift */,
-				5CB8308E29A4AFC000BE10EC /* ContentView.swift */,
+				5CB8308E29A4AFC000BE10EC /* ChatView.swift */,
 				5CB8309029A4AFC100BE10EC /* Assets.xcassets */,
 				5CB8309229A4AFC100BE10EC /* RexlyiOS.entitlements */,
 				5CB8309329A4AFC100BE10EC /* Preview Content */,
@@ -67,6 +70,14 @@
 				5CB8309429A4AFC100BE10EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5CB8309B29A89C0700BE10EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CB8308F29A4AFC000BE10EC /* ContentView.swift in Sources */,
+				5CB8308F29A4AFC000BE10EC /* ChatView.swift in Sources */,
 				5CB8308D29A4AFC000BE10EC /* RexlyiOSApp.swift in Sources */,
+				5CB8309D29A89C1D00BE10EC /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
