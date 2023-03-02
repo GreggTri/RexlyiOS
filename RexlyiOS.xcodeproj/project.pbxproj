@@ -12,6 +12,9 @@
 		5CB8309129A4AFC100BE10EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB8309029A4AFC100BE10EC /* Assets.xcassets */; };
 		5CB8309529A4AFC100BE10EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB8309429A4AFC100BE10EC /* Preview Assets.xcassets */; };
 		5CB8309D29A89C1D00BE10EC /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */; };
+		5CB830A129A8A78E00BE10EC /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A029A8A78E00BE10EC /* SideMenuView.swift */; };
+		5CB830A329A8A8EE00BE10EC /* SideMenuItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */; };
+		5CB830A529A8AAC100BE10EC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A429A8AAC100BE10EC /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		5CB8309229A4AFC100BE10EC /* RexlyiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RexlyiOS.entitlements; sourceTree = "<group>"; };
 		5CB8309429A4AFC100BE10EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
+		5CB830A029A8A78E00BE10EC /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemsModel.swift; sourceTree = "<group>"; };
+		5CB830A429A8AAC100BE10EC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				5CB8309B29A89C0700BE10EC /* Model */,
+				5CB8309E29A8A38E00BE10EC /* ViewModel */,
 				5CB8308C29A4AFC000BE10EC /* RexlyiOSApp.swift */,
 				5CB8308E29A4AFC000BE10EC /* ChatView.swift */,
+				5CB830A029A8A78E00BE10EC /* SideMenuView.swift */,
+				5CB830A429A8AAC100BE10EC /* AccountView.swift */,
 				5CB8309029A4AFC100BE10EC /* Assets.xcassets */,
 				5CB8309229A4AFC100BE10EC /* RexlyiOS.entitlements */,
 				5CB8309329A4AFC100BE10EC /* Preview Content */,
@@ -76,8 +85,16 @@
 			isa = PBXGroup;
 			children = (
 				5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */,
+				5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5CB8309E29A8A38E00BE10EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB830A529A8AAC100BE10EC /* AccountView.swift in Sources */,
 				5CB8308F29A4AFC000BE10EC /* ChatView.swift in Sources */,
 				5CB8308D29A4AFC000BE10EC /* RexlyiOSApp.swift in Sources */,
+				5CB830A329A8A8EE00BE10EC /* SideMenuItemsModel.swift in Sources */,
+				5CB830A129A8A78E00BE10EC /* SideMenuView.swift in Sources */,
 				5CB8309D29A89C1D00BE10EC /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

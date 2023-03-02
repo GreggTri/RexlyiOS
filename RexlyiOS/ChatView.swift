@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ChatView.swift
 //  RexlyiOS
 //
 //  Created by Gregg Trimarchi on 2/21/23.
@@ -9,40 +9,58 @@ import SwiftUI
 
 struct ChatView: View {
     
+    @State var menuOpened: Bool = false
     @State var chatMessages: [ChatMessageModel] = ChatMessageModel.sampleMessages
     @State var messageText: String = ""
     
     var body: some View {
-        VStack {
-            Header()
-                .padding(.bottom, 8.0)
-            ScrollView(){
-                LazyVStack(){
-                    ForEach(chatMessages, id: \.id){ message in
-                        messageView(message: message)
-                        
+        ZStack(){
+            VStack {
+                HStack(alignment: .center, spacing: 0){
+                        Image(systemName: "line.3.horizontal")
+                            .imageScale(.large)
+                            .onTapGesture {
+                                self.menuOpened.toggle()
+                            }
+                    
+                        Spacer()
+                        Text("Rexly")
+                            .font(.title2)
+                            .fontWeight(.medium)
+                            .padding([.trailing])
+                        Spacer()
+                }
+                ScrollView(){
+                    LazyVStack(){
+                        ForEach(chatMessages, id: \.id){ message in
+                            messageView(message: message)
+                            
+                        }
                     }
                 }
-            }
-            HStack(){
-                TextField("Enter a message", text: $messageText)
+                HStack(){
+                    TextField("Send a message", text: $messageText)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8.0)
+                        .background(.gray.opacity(0.2))
+                        .cornerRadius(10)
+                    Button("Send"){
+                        print(messageText)
+                        sendMessage(userMessage: messageText)
+                    }
+                    .foregroundColor(.white)
                     .padding(.horizontal)
                     .padding(.vertical, 8.0)
-                    .background(.gray.opacity(0.2))
-                    .cornerRadius(10)
-                Button("Send"){
-                    sendMessage()
+                    .background(.green)
+                    .cornerRadius(12)
                 }
-                .foregroundColor(.white)
-                .padding(.horizontal)
-                .padding(.vertical, 8.0)
-                .background(.green)
-                .cornerRadius(12)
             }
-            
         }
-        .padding()
         .preferredColorScheme(.dark)
+        .overlay(
+            SideMenuView(width: 220, menuOpened: menuOpened, toggleMenu: toggleMenu)
+        )
+        
     }
     func messageView(message: ChatMessageModel) -> some View {
         HStack(){
@@ -56,31 +74,10 @@ struct ChatView: View {
             if message.sender == .app {Spacer()}
         }
     }
-    func sendMessage(){
-        print(messageText)
+    func sendMessage(userMessage: String){
+        print(userMessage)
     }
-}
-
-struct Header: View {
-    @State var menuOpened: Bool = false
     
-    var body: some View {
-        ZStack(alignment: .topLeading){
-            HStack(alignment: .center, spacing: 0){
-                Image(systemName: "line.3.horizontal")
-                    .imageScale(.large)
-                    .onTapGesture {
-                        self.menuOpened.toggle()
-                    }
-                Spacer()
-                Text("Rexly")
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .padding([.trailing])
-                Spacer()
-            }
-        }
-    }
     func toggleMenu() {
         menuOpened.toggle()
     }
