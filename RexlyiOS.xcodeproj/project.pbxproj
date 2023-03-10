@@ -15,6 +15,15 @@
 		5CB830A129A8A78E00BE10EC /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A029A8A78E00BE10EC /* SideMenuView.swift */; };
 		5CB830A329A8A8EE00BE10EC /* SideMenuItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */; };
 		5CB830A529A8AAC100BE10EC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A429A8AAC100BE10EC /* AccountView.swift */; };
+		5CB830A729B44B1A00BE10EC /* CreateAccountVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A629B44B1A00BE10EC /* CreateAccountVIew.swift */; };
+		5CB830A929B44B3F00BE10EC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830A829B44B3F00BE10EC /* SignInView.swift */; };
+		5CB830AB29B45EA200BE10EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830AA29B45EA200BE10EC /* UserModel.swift */; };
+		5CB830AD29B45F3400BE10EC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830AC29B45F3400BE10EC /* LoginViewModel.swift */; };
+		5CB830B029BA8CB700BE10EC /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830AF29BA8CB700BE10EC /* WebService.swift */; };
+		5CB830B229BB07D800BE10EC /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830B129BB07D800BE10EC /* ChatViewModel.swift */; };
+		5CB830B429BB0CF500BE10EC /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830B329BB0CF500BE10EC /* CreateAccountViewModel.swift */; };
+		5CB830B629BB0DCF00BE10EC /* AutheticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830B529BB0DCF00BE10EC /* AutheticationError.swift */; };
+		5CB830B829BB0DFC00BE10EC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB830B729BB0DFC00BE10EC /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		5CB830A029A8A78E00BE10EC /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemsModel.swift; sourceTree = "<group>"; };
 		5CB830A429A8AAC100BE10EC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		5CB830A629B44B1A00BE10EC /* CreateAccountVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVIew.swift; sourceTree = "<group>"; };
+		5CB830A829B44B3F00BE10EC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		5CB830AA29B45EA200BE10EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5CB830AC29B45F3400BE10EC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5CB830AF29BA8CB700BE10EC /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		5CB830B129BB07D800BE10EC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		5CB830B329BB0CF500BE10EC /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		5CB830B529BB0DCF00BE10EC /* AutheticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationError.swift; sourceTree = "<group>"; };
+		5CB830B729BB0DFC00BE10EC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +78,15 @@
 		5CB8308B29A4AFC000BE10EC /* RexlyiOS */ = {
 			isa = PBXGroup;
 			children = (
+				5CB830AE29BA8C8600BE10EC /* Services */,
 				5CB8309B29A89C0700BE10EC /* Model */,
 				5CB8309E29A8A38E00BE10EC /* ViewModel */,
 				5CB8308C29A4AFC000BE10EC /* RexlyiOSApp.swift */,
 				5CB8308E29A4AFC000BE10EC /* ChatView.swift */,
 				5CB830A029A8A78E00BE10EC /* SideMenuView.swift */,
 				5CB830A429A8AAC100BE10EC /* AccountView.swift */,
+				5CB830A629B44B1A00BE10EC /* CreateAccountVIew.swift */,
+				5CB830A829B44B3F00BE10EC /* SignInView.swift */,
 				5CB8309029A4AFC100BE10EC /* Assets.xcassets */,
 				5CB8309229A4AFC100BE10EC /* RexlyiOS.entitlements */,
 				5CB8309329A4AFC100BE10EC /* Preview Content */,
@@ -86,6 +107,7 @@
 			children = (
 				5CB8309C29A89C1D00BE10EC /* ChatMessageModel.swift */,
 				5CB830A229A8A8EE00BE10EC /* SideMenuItemsModel.swift */,
+				5CB830AA29B45EA200BE10EC /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,8 +115,21 @@
 		5CB8309E29A8A38E00BE10EC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5CB830AC29B45F3400BE10EC /* LoginViewModel.swift */,
+				5CB830B129BB07D800BE10EC /* ChatViewModel.swift */,
+				5CB830B329BB0CF500BE10EC /* CreateAccountViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5CB830AE29BA8C8600BE10EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5CB830AF29BA8CB700BE10EC /* WebService.swift */,
+				5CB830B529BB0DCF00BE10EC /* AutheticationError.swift */,
+				5CB830B729BB0DFC00BE10EC /* NetworkError.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +202,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB830B029BA8CB700BE10EC /* WebService.swift in Sources */,
+				5CB830AD29B45F3400BE10EC /* LoginViewModel.swift in Sources */,
 				5CB830A529A8AAC100BE10EC /* AccountView.swift in Sources */,
 				5CB8308F29A4AFC000BE10EC /* ChatView.swift in Sources */,
+				5CB830B429BB0CF500BE10EC /* CreateAccountViewModel.swift in Sources */,
 				5CB8308D29A4AFC000BE10EC /* RexlyiOSApp.swift in Sources */,
 				5CB830A329A8A8EE00BE10EC /* SideMenuItemsModel.swift in Sources */,
+				5CB830A729B44B1A00BE10EC /* CreateAccountVIew.swift in Sources */,
 				5CB830A129A8A78E00BE10EC /* SideMenuView.swift in Sources */,
+				5CB830B829BB0DFC00BE10EC /* NetworkError.swift in Sources */,
+				5CB830A929B44B3F00BE10EC /* SignInView.swift in Sources */,
+				5CB830AB29B45EA200BE10EC /* UserModel.swift in Sources */,
+				5CB830B629BB0DCF00BE10EC /* AutheticationError.swift in Sources */,
+				5CB830B229BB07D800BE10EC /* ChatViewModel.swift in Sources */,
 				5CB8309D29A89C1D00BE10EC /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

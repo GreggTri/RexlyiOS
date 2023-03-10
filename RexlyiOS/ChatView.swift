@@ -22,7 +22,6 @@ struct ChatView: View {
                             .onTapGesture {
                                 self.menuOpened.toggle()
                             }
-                    
                         Spacer()
                         Text("Rexly")
                             .font(.title2)
@@ -44,23 +43,25 @@ struct ChatView: View {
                         .padding(.vertical, 8.0)
                         .background(.gray.opacity(0.2))
                         .cornerRadius(10)
-                    Button("Send"){
-                        print(messageText)
-                        sendMessage(userMessage: messageText)
+                    Spacer()
+                    Button(action: {
+                        // Action to perform when button is tapped
+                    }) {
+                        Image(systemName: "paperplane.fill")
                     }
                     .foregroundColor(.white)
                     .padding(.horizontal)
                     .padding(.vertical, 8.0)
                     .background(.green)
-                    .cornerRadius(12)
+                    .cornerRadius(10)
                 }
+                .padding(.horizontal, 5.0)
             }
         }
         .preferredColorScheme(.dark)
         .overlay(
             SideMenuView(width: 220, menuOpened: menuOpened, toggleMenu: toggleMenu)
         )
-        
     }
     func messageView(message: ChatMessageModel) -> some View {
         HStack(){
@@ -75,9 +76,24 @@ struct ChatView: View {
         }
     }
     func sendMessage(userMessage: String){
-        print(userMessage)
+        //@State var response: String = ""
+        
+        guard let url = URL(string: "\(apiURL)/v1/chat") else {
+                    print("Invalid URL")
+                    return
+                }
+
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+
+//        URLSession.shared.dataTaskPublisher(for: request)
+//            .map { $0.data }
+//            .map { String(data: $0, encoding: .utf8) ?? "" }
+//            .replaceError(with: "Sorry, an error occurred.")
+//            .receive(on: DispatchQueue.main)
+//            .assign(to: &$response)
+//            .store(in: &cancellables)
     }
-    
     func toggleMenu() {
         menuOpened.toggle()
     }
