@@ -11,7 +11,7 @@ struct ChatView: View {
     
     @State var menuOpened: Bool = false
     @State var chatMessages: [ChatMessageModel] = ChatMessageModel.sampleMessages
-    @State var messageText: String = ""
+    @StateObject private var ChatVM = ChatViewModel(LoginVM: LoginViewModel())
     
     var body: some View {
         ZStack(){
@@ -38,14 +38,18 @@ struct ChatView: View {
                     }
                 }
                 HStack(){
-                    TextField("Send a message", text: $messageText)
+                    TextField("Send a message", text: $ChatVM.message)
                         .padding(.horizontal)
                         .padding(.vertical, 8.0)
                         .background(.gray.opacity(0.2))
                         .cornerRadius(10)
                     Spacer()
                     Button(action: {
-                        // Action to perform when button is tapped
+                        if ($ChatVM.message.wrappedValue.count > 0){
+                            ChatVM.chat()
+                        } else {
+                            print("add text loser")
+                        }
                     }) {
                         Image(systemName: "paperplane.fill")
                     }
@@ -74,25 +78,6 @@ struct ChatView: View {
                 .cornerRadius(16)
             if message.sender == .app {Spacer()}
         }
-    }
-    func sendMessage(userMessage: String){
-        //@State var response: String = ""
-        
-        guard let url = URL(string: "\(apiURL)/v1/chat") else {
-                    print("Invalid URL")
-                    return
-                }
-
-                var request = URLRequest(url: url)
-                request.httpMethod = "POST"
-
-//        URLSession.shared.dataTaskPublisher(for: request)
-//            .map { $0.data }
-//            .map { String(data: $0, encoding: .utf8) ?? "" }
-//            .replaceError(with: "Sorry, an error occurred.")
-//            .receive(on: DispatchQueue.main)
-//            .assign(to: &$response)
-//            .store(in: &cancellables)
     }
     func toggleMenu() {
         menuOpened.toggle()

@@ -11,7 +11,7 @@ import SwiftUI
 class ChatViewModel: ObservableObject {
     
     @ObservedObject var LoginVM: LoginViewModel
-    var userMessage: String = ""
+    var message: String = ""
     init(LoginVM: LoginViewModel){
         self.LoginVM = LoginVM
     }
@@ -23,10 +23,13 @@ class ChatViewModel: ObservableObject {
             LoginVM.logout()
             return
         }
-        WebService().chat(token: token, userMessage: userMessage) { result in
+        WebService().chat(token: token, userMessage: message) { result in
             switch result {
             case .success(let response):
                 print(response)
+                //TODO: Still need to actually grab user message while also displaying that message and then work here to then post new bot message with products in applicable
+                
+                
             case .failure(let error):
                 switch error {
                 case .invalidCredentials:
