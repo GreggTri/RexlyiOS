@@ -29,11 +29,17 @@ struct ChatView: View {
                             .padding([.trailing])
                         Spacer()
                 }
-                ScrollView(){
-                    LazyVStack(){
-                        ForEach(chatMessages, id: \.id){ message in
-                            messageView(message: message)
-                            
+                ScrollViewReader{ proxy in
+                    ScrollView(){
+                        LazyVStack(){
+                            ForEach(chatMessages, id: \.id){ message in
+                                messageView(message: message)
+                                    .id(message.id)
+                            }
+                        }
+                    }.onAppear {
+                        withAnimation {
+                            proxy.scrollTo(chatMessages.last?.id)
                         }
                     }
                 }
